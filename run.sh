@@ -20,7 +20,7 @@ cd build
 make
 sudo make install
 
-sudo apt-get install -y compton suckless-tools feh rxvt ranger obs-studio
+sudo apt-get install -y compton suckless-tools feh rxvt ranger obs-studio ffmpeg
 
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 sudo dpkg -i google-chrome-stable_current_amd64.deb
