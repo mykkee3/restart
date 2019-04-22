@@ -26,6 +26,8 @@ wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt install -f
 
+mkdir ~/Wallpapers
+cp res/ae188e318ffa2043fc04017447a73985.jpg ~/Wallpapers/
 cp -v .bash_profile ~/
 cp -v .xinitrc ~/
 cp -v .Xdefaults ~/
