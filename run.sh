@@ -33,3 +33,5 @@ cp -v .xinitrc ~/
 cp -v .Xdefaults ~/
 
 nmcli d wifi connect Primus-32e6 password $1
+
+reboot
