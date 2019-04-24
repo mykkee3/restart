@@ -58,12 +58,12 @@ mkdir -v ~/Downloads
 mkdir -v ~/Resources
 
 # move dotfiles
-cp -v .bash_profile ~/
-cp -v .xinitrc ~/
-cp -v .Xdefaults ~/
-cp -v i3_config ~/.config/i3/config
-cp -v ranger_rc.conf ~/.config/ranger/rc.conf
-cp -v i3blocks.conf /etc/
+cp -v ./.bash_profile ~/
+cp -v ./.xinitrc ~/
+cp -v ./.Xdefaults ~/
+cp -v ./i3_config ~/.config/i3/config
+cp -v ./ranger_rc.conf ~/.config/ranger/rc.conf
+cp -v ./i3blocks.conf /etc/
 
 # Network Setup
 echo "To setup the network run:"
