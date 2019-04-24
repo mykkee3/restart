@@ -46,9 +46,17 @@ wget -O discord.deb "https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.de
 sudo dpkg -i discord.deb
 sudo apt install -f -y
 
-# themes
-mkdir ~/Wallpapers
-cp res/* ~/Wallpapers/
+# themes and housekeeping
+mkdir -v ~/Wallpapers
+cp Wallpapers/* ~/Wallpapers/
+mkdir -v ~/scripts
+cp scripts/* ~/scripts/
+mkdir -v ~/dev
+mkdir -v ~/Music
+mkdir -v ~/Videos
+mkdir -v ~/Downloads
+mkdir -v ~/Resources
+
 # move dotfiles
 cp -v .bash_profile ~/
 cp -v .xinitrc ~/

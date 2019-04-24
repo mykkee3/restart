@@ -1,7 +1,8 @@
 # Should save all the dot-files/etc to be readied to push to github
 
 # themes
-cp -v ~/Wallpapers/* ./res/
+cp -v ~/Wallpapers/* ./Wallpapers/
+cp -v ~/scripts/* ./scripts/
 # dot-files
 cp -v ~/.bash_profile .
 cp -v ~/.xinitrc .
