@@ -3,7 +3,7 @@ sudo apt-get -y update && sudo apt-get -y upgrade
 sudo apt-get install -y git wget
 
 # i3-gaps dependancies
-sudo apt-get install -y libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev gcc
+sudo apt-get install -y libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev gcc xinit
 # system dependancies
 sudo apt-get install -y network-manager net-tools openssh-server alsa-utils zathura
 
@@ -61,9 +61,10 @@ mkdir -v ~/Resources
 cp -v .bash_profile ~/
 cp -v .xinitrc ~/
 cp -v .Xdefaults ~/
+mkdir ~/.config/i3
 cp -v i3_config ~/.config/i3/config
 cp -v ranger_rc.conf ~/.config/ranger/rc.conf
-cp -v i3blocks.conf /etc/
+sudo cp -v i3blocks.conf /etc/
 
 # some cleanup stuff
 sudo apt-get update && sudo apt-get upgrade -y
