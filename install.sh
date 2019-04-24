@@ -65,6 +65,10 @@ cp -v i3_config ~/.config/i3/config
 cp -v ranger_rc.conf ~/.config/ranger/rc.conf
 cp -v i3blocks.conf /etc/
 
+# some cleanup stuff
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt autoremove -y
+
 # Network Setup
 echo "To setup the network run:"
 echo "\`nmcli d wifi connect Primus-32e6 password *passwd\`"
