@@ -5,7 +5,7 @@ sudo apt-get install -y git wget
 # i3-gaps dependancies
 sudo apt-get install -y libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev gcc
 # system dependancies
-sudo apt-get install -y network-manager net-tools openssh-server alsa-utils
+sudo apt-get install -y network-manager net-tools openssh-server alsa-utils zathura
 
 # system bloatware
 sudo apt-get install -y compton suckless-tools feh rxvt ranger obs-studio ffmpeg
