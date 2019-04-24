@@ -1,5 +1,8 @@
+export PATH="$PATH:~/scripts"
 
-#export TERMINAL = ""
+#export TERMINAL = "urxvt"
+export BROWSER="google-chrome"
+
 alias open="xdg-open"
 
 feh --randomize --bg-fill Wallpapers/*

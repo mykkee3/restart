@@ -8,4 +8,4 @@ cp -v ~/.xinitrc .
 cp -v ~/.Xdefaults .
 cp -v ~/.config/i3/config ./i3_config
 cp -v ~/.config/ranger/rc.conf ./ranger_rc.conf
-cp -v /etc/i3blocks.config .
+cp -v /etc/i3blocks.conf .
