@@ -1,0 +1,4 @@
+prompt="Yes or No?"
+if [[ ! -z ${1+x} ]]; then prompt=$1; fi
+
+echo -e "No\nYes" | dmenu -i -p "$prompt"

@@ -1,0 +1,16 @@
+filein=$1
+fileout=$2
+
+spd="0.1"
+
+if [[ ! -z ${3+x} ]]; then spd=$3; fi
+
+cmd="ffmpeg -i $filein -filter:v "setpts=$spd*PTS" -an $fileout"
+msg="Run command?: \`$cmd\`"
+echo "$msg"
+resp=$(prompt_ny "Run command?")
+
+if [[ $resp == "Yes" ]]; then 
+    echo "Running command: \`$cmd\`";
+    $cmd
+fi
