@@ -60,5 +60,7 @@ cp -v i3blocks.conf /etc/
 # Network Setup
 echo "To setup the network run:"
 echo "\`nmcli d wifi connect Primus-32e6 password *passwd\`"
+echo
+echo "then consider rebooting..."
 
 #reboot
