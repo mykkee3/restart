@@ -58,14 +58,6 @@ mkdir -v ~/Downloads
 mkdir -v ~/Resources
 
 # move dotfiles
-<<<<<<< HEAD
-cp -v ./.bash_profile ~/
-cp -v ./.xinitrc ~/
-cp -v ./.Xdefaults ~/
-cp -v ./i3_config ~/.config/i3/config
-cp -v ./ranger_rc.conf ~/.config/ranger/rc.conf
-cp -v ./i3blocks.conf /etc/
-=======
 cp -v .bash_profile ~/
 cp -v .xinitrc ~/
 cp -v .Xdefaults ~/
@@ -77,7 +69,6 @@ sudo cp -v i3blocks.conf /etc/
 # some cleanup stuff
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt autoremove -y
->>>>>>> f6c289927a341aa55d8511cdcbd7d8033db5777d
 
 # Network Setup
 echo "To setup the network run:"
