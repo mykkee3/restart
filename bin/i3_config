@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $TERMINAL
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -191,7 +191,7 @@ bindsym $mod+Shift+v mode "$volume"
 gaps inner 15
 gaps outer -3
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 new_window 1pixel
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -210,4 +210,34 @@ bindsym $mod+F2 exec $BROWSER
 bindsym $mod+F4 exec urxvt -e ranger
 
 #shutdown 
-bindsym $mod+Shift+x exec promt_ny
+#bindsym $mod+Shift+x exec promt_ny
+
+# -=-=- Dropdown Terminal -=-=- #
+# Config
+for_window [instance="term_dropdown"] floating enable
+for_window [instance="term_dropdown"] resize set 600 400
+for_window [instance="term_dropdown"] move scratchpad
+for_window [instance="term_dropdown"] border pixel 3
+exec --no-startup-id urxvt -name term_dropdown
+# Key binds
+bindsym $mod+Shift+Return [instance="term_dropdown"] scratchpad show; [instance="term_dropdown"] move position center
+
+# -=-=- Dropdown Ranger -=-=- #
+# Config
+for_window [instance="ranger_dropdown"] floating enable
+for_window [instance="ranger_dropdown"] resize set 700 550
+for_window [instance="ranger_dropdown"] move scratchpad
+for_window [instance="ranger_dropdown"] border pixel 3
+exec --no-startup-id urxvt -name ranger_dropdown -e ranger
+#key binds
+bindsym $mod+Shift+F4 [instance="ranger_dropdown"] scratchpad show; [instance="ranger_dropdown"] move position center
+
+# -=-=- Dropdown Math (python) -=-=- #
+# Config
+for_window [instance="python_dropdown"] floating enable
+for_window [instance="python_dropdown"] resize set 400 600
+for_window [instance="python_dropdown"] move scratchpad
+for_window [instance="python_dropdown"] border pixel 3
+exec --no-startup-id urxvt -name python_dropdown -e python
+#key binds
+bindsym $mod+Shift+p [instance="python_dropdown"] scratchpad show; [instance="python_dropdown"] move position center
