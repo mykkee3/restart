@@ -11,7 +11,7 @@
 # $BROWSER : google-chrome
 #
 # Bloatware:
-# - obs-studio discord
+# - obs-studio ffmpeg discord
 # -=-=-
 
 
@@ -26,47 +26,24 @@ echo
 sudo update-grub
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
+sudo apt-get install -y git wget # git is probably already installed but still
+
+# system dependancies
+sudo apt-get install -y network-manager net-tools openssh-server alsa-utils zathura rxvt compton feh suckless-tools ranger vim ffmpeg
+#ranger setup
+ranger --copy-config=all
 
 
-# -=-=- Main Install -=-=- #
+# -=-=- Closing Cleanup -=-=- #
 #
 
 echo
-echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
-echo
-echo "Starting Main Install"
-echo
-echo "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+echo "cleaning up.."
 echo
 
-# Install Ubuntu System
-sudo sh sys/install_sys.sh
-
-# Install I3 Desktop
-sudo sh sys/install_i3.sh
-
-# Install System Bloatware
-sudo sh sys/install_bloat.sh
-
-# push personal configs
-sudo sh sys/push_current.sh
-
-
-# -=-=- Clean-Up -=-=- #
-#
-
+# some cleanup stuff
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt autoremove -y
-
-# Network Setup
-echo "To setup the network run:"
-echo "\`nmcli d wifi connect Primus-32e6 password *passwd\`"
-echo
-echo "then consider rebooting..."
-
-#reboot
-
-
 
 # EOF

@@ -7,6 +7,7 @@ cp -v ~/scripts/* ./bin/.scripts/
 # dot-files
 cp -v ~/.bash_profile ./bin/
 cp -v ~/.bash_aliases ./bin/
+cp -v ~/.vimrc ./bin/
 cp -v ~/.xinitrc ./bin/
 cp -v ~/.Xdefaults ./bin/
 cp -v ~/.config/i3/config ./bin/i3_config

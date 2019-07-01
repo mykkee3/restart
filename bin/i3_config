@@ -206,9 +206,6 @@ bar {
 #Web browser
 bindsym $mod+F2 exec $BROWSER
 
-#ranger
-bindsym $mod+F4 exec urxvt -e ranger
-
 #shutdown 
 #bindsym $mod+Shift+x exec promt_ny
 
@@ -230,7 +227,20 @@ for_window [instance="ranger_dropdown"] move scratchpad
 for_window [instance="ranger_dropdown"] border pixel 3
 exec --no-startup-id urxvt -name ranger_dropdown -e ranger
 #key binds
+bindsym $mod+F4 exec urxvt -e ranger #regular window
 bindsym $mod+Shift+F4 [instance="ranger_dropdown"] scratchpad show; [instance="ranger_dropdown"] move position center
+
+
+# -=-=- Dropdown Music -=-=- #
+# Config
+for_window [instance="music_dropdown"] floating enable
+for_window [instance="music_dropdown"] resize set 900 450
+for_window [instance="music_dropdown"] move scratchpad
+for_window [instance="music_dropdown"] border pixel 3
+exec --no-startup-id urxvt -name music_dropdown -e ncmpcpp
+#key binds
+bindsym $mod+m exec urxvt -e ncmpcpp #regular window
+bindsym $mod+Shift+m [instance="music_dropdown"] scratchpad show; [instance="music_dropdown"] move position center
 
 # -=-=- Dropdown Math (python) -=-=- #
 # Config
@@ -240,4 +250,7 @@ for_window [instance="python_dropdown"] move scratchpad
 for_window [instance="python_dropdown"] border pixel 3
 exec --no-startup-id urxvt -name python_dropdown -e python
 #key binds
+bindsym $mod+p exec urxvt -e python #regular window
 bindsym $mod+Shift+p [instance="python_dropdown"] scratchpad show; [instance="python_dropdown"] move position center
+
+

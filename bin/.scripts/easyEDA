@@ -1,0 +1,4 @@
+/*
+Since there is no stable version, the online one is used through `google-chrome --app` which takes the address as the argument.
+*/
+google-chrome --app=https://easyeda.com/editor
