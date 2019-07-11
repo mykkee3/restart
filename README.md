@@ -18,6 +18,9 @@ This is the readme for restart and it is used to do things...
 
 # TODO
 
+- [ ] printer
+	- figure out printers
+
 - [ ] more backgrounds
 - [ ] calander service
 - [ ] global hotkey setup
