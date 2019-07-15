@@ -26,7 +26,7 @@ echo
 echo "Installing bloatware..."
 echo
 
-sudo apt-get install vim ranger ffmpeg
+sudo apt-get install -y vim ranger ffmpeg
 # Ranger Setup
 ranger --copy-config=all
 
@@ -38,9 +38,9 @@ echo
 echo "Installing I3 and stuff ^v^"
 echo
 
-sudo apt-get install compton feh rxvt
-sudo apt-get install xserver-xorg xinit
-sudo apt-get install i3blocks i3 dmenu suckless-tools
+sudo apt-get install -y compton feh rxvt
+sudo apt-get install -y xserver-xorg xinit
+sudo apt-get install -y i3blocks i3 dmenu suckless-tools
 
 
 # -=-=- Move files -=-=- #

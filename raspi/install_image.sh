@@ -57,7 +57,8 @@ echo
 echo "Writing to disk"
 echo
 
-sudo dd bs=4M if=$infile of=$disk status=progress conv=fsync
+#sudo dd bs=4M if=$infile of=/dev/$disk status=progress conv=fsync
+sudo dd if=$infile of=/dev/$disk status=progress conv=fsync
 
 #TODO: do checks on conpletion stuff
 

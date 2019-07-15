@@ -6,7 +6,7 @@ export BROWSER="google-chrome"
 
 alias open="xdg-open"
 
-feh --randomize --bg-fill /home/share/Photos/Wallpapers/*
+feh --randomize --bg-fill ~/Wallpapers/*
 
 mpd &
 compton &

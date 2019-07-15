@@ -29,7 +29,7 @@ sudo apt-get dist-upgrade -y
 sudo apt-get install -y git wget # git is probably already installed but still
 
 # system dependancies
-sudo apt-get install -y network-manager net-tools openssh-server alsa-utils zathura rxvt compton feh suckless-tools ranger vim ffmpeg
+sudo apt-get install -y network-manager net-tools openssh-server alsa-utils zathura rxvt compton feh suckless-tools ranger vim ffmpeg unzip
 #ranger setup
 ranger --copy-config=all
 
