@@ -60,7 +60,7 @@ cp -v ./raspi/wallpaper.jpg ~/
 sudo mkdir ~/.config/
 sudo mkdir ~/.config/i3/
 
-sudo cp -v ./bin/i3_config ~/.config/i3/config
+sudo cp -v ./raspi/i3_config ~/.config/i3/config
 sudo cp -v ./bin/i3blocks.conf /etc/
 
 

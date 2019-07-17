@@ -57,8 +57,19 @@ echo
 echo "Writing to disk"
 echo
 
-#sudo dd bs=4M if=$infile of=/dev/$disk status=progress conv=fsync
-sudo dd if=$infile of=/dev/$disk status=progress conv=fsync
+write_disk () {
+	sudo dd bs=1M if=$infile of=/dev/$disk status=progress conv=fsync
+	#sudo dd if=$infile of=/dev/$disk status=progress conv=fsync
+};
+
+while true; do
+    read -p "Do you want to write to $disk? [Y/n] " yn
+    case $yn in
+        [Yy]* ) write_disk; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer with [Y/n]";;
+    esac
+done
 
 #TODO: do checks on conpletion stuff
 
@@ -91,43 +102,43 @@ sudo cp -v installation_line.sh /mnt/raspi-disk/home/pi/
 
 
 # =========================================================
-#do_reboot=0;
-#
-#echo "Do you want to rotate screen?"
-#echo
-#
-#rotate_screen () {
-#	echo
-#	echo "0 : no rotation"
-#	echo "1 : 90 degrees cw"
-#	echo "2 : 180 degrees"
-#	echo "3 : 90 degreec ccw"
-#	echo 
-#	read -p "select an option: [0-3] " rot
-#	
-#	case $rot in
-#		[0-3]* ) sudo echo "\ndisplay_rotate=$rot" >> /boot/config.txt; echo "display_rotate$rot >> /boot/config.txt"; break;;
-#		* ) echo "Not a valid option!"; break;;
-#	esac
-#
-#	#TODO: not perfect will append not replace
-#};
-#
+
+boot_disk=/dev/"$disk"1
+do_reboot=0;
+
+rotate_screen () {
+	echo
+	echo "0 : no rotation"
+	echo "1 : 90 degrees cw"
+	echo "2 : 180 degrees"
+	echo "3 : 90 degreec ccw"
+	echo 
+	read -p "select an option: [0-3] " rot
+	sudo mount $boot_disk /mnt/raspi-disk/	
+
+	case $rot in
+		[0-3]* ) echo "\n\n# User Code\n\ndisplay_rotate=$rot" | sudo tee -a /mnt/raspi-disk/config.txt; echo "display_rotate=$rot >> /boot/config.txt"; break;;
+		* ) echo "Not a valid option!"; break;;
+	esac
+
+	#TODO: not perfect will append not replace
+};
+
+while true; do
+    read -p "Do you want to rotate the screen? [Y/n] " yn
+    case $yn in
+        [Yy]* ) do_reboot=1; rotate_screen; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer with [Y/n]";;
+    esac
+done
+
 #while true; do
-#    read -p "Do you want to rotate the screen? [y/n] " yn
-#    case $yn in
-#        [Yy]* ) do_reboot=1; rotate_screen; break;;
-#        [Nn]* ) break;;
-#        * ) echo "Please answer with [y/n]";;
-#    esac
-#done
-#
-#while true; do
-#    read -p "Do you want to apply the \"raspi screen fix\"? [y/n] " yn
+#    read -p "Do you want to apply the \"raspi screen fix\"? [Y/n] " yn
 #    case $yn in
 #        [Yy]* ) echo "Not made yet..."; break;;
 #        [Nn]* ) break;;
-#        * ) echo "Please answer with [y/n]";;
+#        * ) echo "Please answer with [Y/n]";;
 #    esac
 #done
 # =========================================================
@@ -139,6 +150,7 @@ echo "Finishing up"
 echo
 
 sudo umount -v $mnt_disk
+sudo umount -v $boot_disk
 
 echo
 echo "==========================="
