@@ -51,8 +51,8 @@ echo "Moving files"
 echo
 
 cp -v ./bin/.vimrc ~/
-cp -v ./bin/bash_profile ~/
-cp -v ./bin/Xdefaults ~/
+cp -v ./bin/.bash_profile ~/
+cp -v ./bin/.Xdefaults ~/
 
 cp -v ./raspi/.xinit.rc ~/
 cp -v ./raspi/wallpaper.jpg ~/
