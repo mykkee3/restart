@@ -100,10 +100,12 @@ echo
 sudo cp -v .bash_profile /mnt/raspi-disk/home/pi/
 sudo cp -v installation_line.sh /mnt/raspi-disk/home/pi/
 
+sudo umount -v $mnt_disk
+sudo umount -v /dev/$disk
 
 # =========================================================
 
-boot_disk=/dev/"$disk"1
+mnt_disk=/dev/"$disk"1
 do_reboot=0;
 
 rotate_screen () {
@@ -114,7 +116,7 @@ rotate_screen () {
 	echo "3 : 90 degreec ccw"
 	echo 
 	read -p "select an option: [0-3] " rot
-	sudo mount $boot_disk /mnt/raspi-disk/	
+	sudo mount -v $mnt_disk /mnt/raspi-disk/	
 
 	case $rot in
 		[0-3]* ) echo "\n\n# User Code\n\ndisplay_rotate=$rot" | sudo tee -a /mnt/raspi-disk/config.txt; echo "display_rotate=$rot >> /boot/config.txt"; break;;
@@ -141,6 +143,9 @@ done
 #        * ) echo "Please answer with [Y/n]";;
 #    esac
 #done
+
+sudo umount -v $mnt_disk
+
 # =========================================================
 
 echo
@@ -149,8 +154,7 @@ echo
 echo "Finishing up"
 echo
 
-sudo umount -v $mnt_disk
-sudo umount -v $boot_disk
+sleep 1
 
 echo
 echo "==========================="
