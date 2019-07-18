@@ -58,10 +58,10 @@ sudo cp -v ./bin/.Xdefaults /home/pi/
 sudo cp -v ./raspi/.xinit.rc /home/pi/
 sudo cp -v ./raspi/wallpaper.jpg /home/pi/
 
-sudo mkdir /home/pi/.config/
-sudo mkdir /home/pi/.config/i3/
+#sudo mkdir /home/pi/.config/
+#sudo mkdir /home/pi/.config/i3/
 
-sudo cp -v ./raspi/i3_config /home/pi/.config/i3/config
+#sudo cp -v ./raspi/i3_config /home/pi/.config/i3/config
 sudo cp -v ./bin/i3blocks.conf /etc/
 
 
