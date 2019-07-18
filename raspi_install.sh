@@ -27,7 +27,7 @@ echo "Installing bloatware..."
 echo
 
 sudo apt-get install -y vim ranger ffmpeg
-sudo apt-get update --fixmissing
+sudo apt-get update --fix-missing
 # Ranger Setup
 ranger --copy-config=all
 
