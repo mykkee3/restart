@@ -65,15 +65,6 @@ sudo cp -v ./raspi/i3_config ~/.config/i3/config
 sudo cp -v ./bin/i3blocks.conf /etc/
 
 
-# -=-=- Manual Stuff -=-=- #
-#
-
-echo 
-echo "Stupid manual stuff \n\tTvT"
-echo
-
-sudo raspi-config
-
 
 # -=-=- Clean-Up -=-=- #
 #
@@ -82,7 +73,7 @@ echo
 echo "Claening up... \n\t^v^"
 echo
 
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update --fix-missing -y && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 sudo apt-get autoremove -y
 
