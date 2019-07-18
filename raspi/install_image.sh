@@ -120,7 +120,7 @@ rotate_screen () {
 
 	case $rot in
 		[0-3]* ) echo "\n\n# User Code\n\ndisplay_rotate=$rot" | sudo tee -a /mnt/raspi-disk/config.txt; echo "display_rotate=$rot >> /boot/config.txt"; break;;
-		* ) echo "Not a valid option!"; break;;
+		* ) echo "Not a valid option!";;
 	esac
 
 	#TODO: not perfect will append not replace

@@ -50,12 +50,12 @@ echo
 echo "Moving files"
 echo
 
-cp -v ./bin/.vimrc ~/
-cp -v ./bin/.bash_profile ~/
-cp -v ./bin/.Xdefaults ~/
+sudo cp -v ./bin/.vimrc ~/
+sudo cp -v ./bin/.bash_profile ~/
+sudo cp -v ./bin/.Xdefaults ~/
 
-cp -v ./raspi/.xinit.rc ~/
-cp -v ./raspi/wallpaper.jpg ~/
+sudo cp -v ./raspi/.xinit.rc ~/
+sudo cp -v ./raspi/wallpaper.jpg ~/
 
 sudo mkdir ~/.config/
 sudo mkdir ~/.config/i3/
