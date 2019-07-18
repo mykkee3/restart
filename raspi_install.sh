@@ -51,17 +51,17 @@ echo
 echo "Moving files"
 echo
 
-sudo cp -v ./bin/.vimrc ~/
-sudo cp -v ./bin/.bash_profile ~/
-sudo cp -v ./bin/.Xdefaults ~/
+sudo cp -v ./bin/.vimrc /home/pi/
+sudo cp -v ./bin/.bash_profile /home/pi/
+sudo cp -v ./bin/.Xdefaults /home/pi/
 
-sudo cp -v ./raspi/.xinit.rc ~/
-sudo cp -v ./raspi/wallpaper.jpg ~/
+sudo cp -v ./raspi/.xinit.rc /home/pi/
+sudo cp -v ./raspi/wallpaper.jpg /home/pi/
 
-sudo mkdir ~/.config/
-sudo mkdir ~/.config/i3/
+sudo mkdir /home/pi/.config/
+sudo mkdir /home/pi/.config/i3/
 
-sudo cp -v ./raspi/i3_config ~/.config/i3/config
+sudo cp -v ./raspi/i3_config /home/pi/.config/i3/config
 sudo cp -v ./bin/i3blocks.conf /etc/
 
 
