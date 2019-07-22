@@ -32,6 +32,13 @@ sudo apt-get update --fix-missing
 ranger --copy-config=all
 
 
+#chrome
+wget -O chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+sudo dpkg -i chrome.deb
+sudo apt install -f -y
+
+
+
 # -=-=- I3 Setup -=-=- #
 #
 
