@@ -26,11 +26,13 @@ echo
 echo "Installing bloatware..."
 echo
 
-sudo apt-get install -y vim ranger ffmpeg jq
+sudo apt-get install -y vim ranger ffmpeg
 sudo apt-get update --fix-missing
 # Ranger Setup
 ranger --copy-config=all
 
+# -=- System stuff -=- #
+sudo apt-get install -y jq unclutter
 
 #chrome
 wget -O chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
