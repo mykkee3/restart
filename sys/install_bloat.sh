@@ -35,9 +35,10 @@ echo "installing .deb installs"
 echo
 
 #chrome
-wget -O chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-sudo dpkg -i chrome.deb
-sudo apt install -f -y
+#wget -O chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+#sudo dpkg -i chrome.deb
+#sudo apt install -f -y
+sudo apt-get install chromium-browser -y;
 
 #discord
 wget -O discord.deb "https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.deb"
